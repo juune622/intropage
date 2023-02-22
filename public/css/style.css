@@ -54,11 +54,12 @@ body.no-scroll {}
 
 #project {max-width: 1280px;margin: 0 auto;padding: 80px 20px;}
 #project h2 {position: relative;font-size: 40px;color: #247d6b;font-family: 'Oswald', sans-serif;margin-bottom: 40px;}
-#project h2::after{content: '';width: 90%;height: 5px;position: absolute;right: 0;bottom: 6px;background-color: #247d6b;}
+#project h2::after{content: '';width: calc(100% - 120px);height: 5px;position: absolute;right: 0;bottom: 6px;background-color: #247d6b;}
 #project .contents {display: flex;justify-content: space-between;}
+#project .contents.reverse{flex-direction: row-reverse;}
 #project > div + div {margin-top: 80px;}
-#project .contents .contents-img {width: calc(50%);box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);}
-#project .contents .contents-img a {display: block;border-radius: 5px;height: 100%;}
+#project .contents .contents-img {width: calc(50%);box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);position: relative;}
+#project .contents .contents-img a {position: absolute;left: 0;top: 50%;transform: translate(0,-50%); border-radius: 5px;}
 #project .contents .contents-img a img{display: block;border-radius: 5px;}
 #project .contents .contents-text {width: calc(50% - 80px);padding: 40px 0;color: #333;}
 #project .contents .contents-text.right {text-align: right;}
@@ -68,7 +69,17 @@ body.no-scroll {}
 #project .contents .contents-text p.page a + a {margin-left: 10px;}
 #project .contents .contents-text p.page a:hover {background-color: #247d6b;color: #fff;}
 
+/* !sub-menu */
 
+.sub-menu {position: fixed;right: 58px;bottom: 150px;text-align: center;}
+.sub-menu ul{}
+.sub-menu ul li{width: 160px;height: 40px;position: relative;}
+.sub-menu ul li + li {margin-top: 5px;}
+.sub-menu ul li a{display: block;position: absolute;top: 0; left: 220px;width: 100%;height: 100%;background-color: #247d6b;font-family: 'Oswald', sans-serif;font-weight: 600;color: #fff;line-height: 40px;border-radius: 100px;border: 1px solid #247d6b;}
+.sub-menu ul li a:hover {background-color: #fff;color: #247d6b;}
+.sub-menu ul li:nth-child(1) a {transition: all 0.3s;}
+.sub-menu ul li:nth-child(2) a {transition: all 0.5s;}
+.sub-menu ul li:nth-child(3) a {transition: all 0.7s;}
 
 
 

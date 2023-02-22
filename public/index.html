@@ -32,10 +32,10 @@
             </nav>
           </div >
           <div class="sub-menu-btn">
-            <a href="#" class="on">📁</a>
-            <a href="#" class="">📂</a>
+            <a href="#" class="open on">📁</a>
+            <a href="#" class="close">📂</a>
           </div>
-          <div class="sub-menu mobile">
+          <div class="sub-menu">
             <ul>
               <li><a href="#">Project</a></li>
               <li><a href="#">About</a></li>
@@ -64,7 +64,10 @@
                 </p>
               </div>  
             </div>
-            <div class="contents">
+            <div class="contents reverse">
+              <div class="contents-img">
+                <a href="https://crenew.cafe24.com/TYRANNO_05/juune/kobako/public/index.html" target="_blank"><img src="./img/kobako.png" alt="kobako 포트폴리오"></a>
+              </div>  
               <div class="contents-text right">
                 <h3>한국방송광고진흥공사</h3>
                 <p>한국방송진흥공사(관공서) 홈페이지입니다.</p>
@@ -75,9 +78,6 @@
                   <a href="https://crenew.cafe24.com/TYRANNO_05/juune/kobako/public/page/vision.html" target="_blank"><span>SUB1</span></a>
                   <a href="https://crenew.cafe24.com/TYRANNO_05/juune/kobako/public/page/management.html" target="_blank"><span>SUB2</span></a>
                 </p>
-              </div>  
-              <div class="contents-img">
-                <a href="https://crenew.cafe24.com/TYRANNO_05/juune/kobako/public/index.html" target="_blank"><img src="./img/kobako.png" alt="kobako 포트폴리오"></a>
               </div>  
             </div>
           </section>
@@ -90,8 +90,32 @@
 <script>
 'use strict';
 
+subMenu();
 
+function subMenu(){
+  const openSubMenuBtn = document.querySelector('div.sub-menu-btn a.open')
+  const closeSubMenuBtn = document.querySelector('div.sub-menu-btn a.close')
+  const subMenuLists = document.querySelectorAll('div.sub-menu ul li a')
+  
+  openSubMenuBtn.addEventListener('click',function(){
+    openSubMenuBtn.classList.remove('on');
+    closeSubMenuBtn.classList.add('on');
+    subMenuLists.forEach(function(subMenuList){
+      subMenuList.setAttribute('style','left: '+0+'px;')
+    })
+  },false);
 
+  closeSubMenuBtn.addEventListener('click',function(){
+    closeSubMenuBtn.classList.remove('on');
+    openSubMenuBtn.classList.add('on');
+    subMenuLists.forEach(function(subMenuList){
+      subMenuList.setAttribute('style','left: '+220+'px;')
+    })
+  },false);
+  
+
+  
+}
 
 
 
