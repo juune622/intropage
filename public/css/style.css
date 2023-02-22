@@ -60,7 +60,18 @@ body.no-scroll {}
 #project .contents .contents-img {width: calc(50%);box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);}
 #project .contents .contents-img a {display: block;border-radius: 5px;height: 100%;}
 #project .contents .contents-img a img{display: block;border-radius: 5px;}
-#project .contents .contents-text {background-color: yellow;width: calc(50% - 80px);}
+#project .contents .contents-text {width: calc(50% - 80px);padding: 40px 0;color: #333;}
+#project .contents .contents-text.right {text-align: right;}
+#project .contents .contents-text h3{font-size: 30px;margin-bottom: 10px;}
+#project .contents .contents-text p{line-height: 40px;font-size: 14px;}
+#project .contents .contents-text p.page a {display: inline-block;border: 1px solid #247d6b;line-height: initial;padding: 3px 8px;border-radius: 5px;color: #247d6b;}
+#project .contents .contents-text p.page a + a {margin-left: 10px;}
+#project .contents .contents-text p.page a:hover {background-color: #247d6b;color: #fff;}
+
+
+
+
+
 
 /* !footer  */
 
