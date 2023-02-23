@@ -63,15 +63,15 @@ body.no-scroll {}
 #project .contents .contents-img a img{display: block;border-radius: 5px;}
 #project .contents .contents-text {width: calc(50% - 80px);padding: 40px 0;color: #333;}
 #project .contents .contents-text.right {text-align: right;}
-#project .contents .contents-text h3{font-size: 30px;margin-bottom: 10px;}
-#project .contents .contents-text p{line-height: 40px;font-size: 14px;}
+#project .contents .contents-text h3{font-size: 40px;margin-bottom: 10px;}
+#project .contents .contents-text p{line-height: 40px;font-size: 18px;}
 #project .contents .contents-text p.page a {display: inline-block;border: 1px solid #247d6b;line-height: initial;padding: 3px 8px;border-radius: 5px;color: #247d6b;}
 #project .contents .contents-text p.page a + a {margin-left: 10px;}
 #project .contents .contents-text p.page a:hover {background-color: #247d6b;color: #fff;}
 
 /* !sub-menu */
 
-.sub-menu {position: fixed;right: 58px;bottom: 150px;text-align: center;}
+.sub-menu {position: fixed;right: 58px;bottom: 150px;text-align: center;z-index: 100;}
 .sub-menu ul{}
 .sub-menu ul li{width: 160px;height: 40px;position: relative;}
 .sub-menu ul li + li {margin-top: 5px;}
